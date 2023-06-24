@@ -36,8 +36,9 @@ def savings(gross_pay, tax_rate, expenses):
     
 
 
-    netpay = (gross_pay - ((gross_pay*tax_rate)//1)) - expenses
-    return netpay
+    savings = (gross_pay - ((gross_pay*tax_rate)//1)) - expenses
+    int(savings)
+    return savings
 
 def material_waste(total_material, material_units, num_jobs, job_consumption):
     '''Material Waste.
@@ -73,8 +74,10 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    remaining_material = total_material - (num_jobs*job_consumption)
-    print(f"The amount of remaining material is: {remaining_material}{material_units}")
+    material_waste = total_material - (num_jobs*job_consumption)
+    str(material_waste)
+    str(material_units)
+    return material_waste,material_units
     
 
 def interest(principal, rate, periods):
@@ -106,8 +109,9 @@ def interest(principal, rate, periods):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    final_investment = (principal+((principal*(rate*periods))//1))
-    return final_investment
+    interest = (principal+((principal*(rate*periods))//1))
+    int(interest)
+    return interest
 
 def body_mass_index(weight, height):
     '''Body Mass Index.
@@ -144,22 +148,20 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-
-    
-
-
     if len(height) <4:
-        
-        feet= int(height[0])
-        inches= int(height[2])
+
+        height = ((((height[0]*12)+height[2])*2.54)/100)**2
+
     
-        converted_weight = (weight/2.205)/(((((feet*12)+inches)*2.54)/100)**2)
-        return converted_weight
+        body_mass_index = (weight/2.205)/height
+        float(body_mass_index)
+        return body_mass_index
     else:
+
+        height = ((((height[0]*12)+(height[3]+10))*2.54)/100)**2
+
     
-        feet= int(height[0])
-        inches= 10+int(height[3])
-    
-        converted_weight = float((weight/2.205)/(((((feet*12)+inches)*2.54)/100)**2))
-        return converted_weight
+        body_mass_index = float((weight/2.205)/height
+        float(body_mass_index)
+        return body_mass_index
 
