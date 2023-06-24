@@ -161,7 +161,7 @@ def body_mass_index(weight, height):
         height = ((((height[0]*12)+(height[3]+10))*2.54)/100)**2
 
     
-        body_mass_index = float((weight/2.205)/height
+        body_mass_index = float((weight/2.205)/height)
         float(body_mass_index)
         return body_mass_index
 
