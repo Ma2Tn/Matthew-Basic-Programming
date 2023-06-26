@@ -74,10 +74,10 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    material_waste = total_material - (num_jobs*job_consumption)
+material_waste = total_material - (num_jobs*job_consumption)
     str(material_waste)
     str(material_units)
-    return material_waste,material_units
+    return (f'{material_waste}{material_units}')
     
 
 def interest(principal, rate, periods):
@@ -148,20 +148,11 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    if len(height) <4:
+   list(height)
 
-        height = ((((height[0]*12)+height[2])*2.54)/100)**2
+    height = ((((height[0]*12)+height[1])*2.54)/100)**2
 
-    
-        body_mass_index = (weight/2.205)/height
-        float(body_mass_index)
-        return body_mass_index
-    else:
-
-        height = ((((height[0]*12)+(height[3]+10))*2.54)/100)**2
-
-    
-        body_mass_index = float((weight/2.205)/height)
-        float(body_mass_index)
-        return body_mass_index
+    bodymassindex = (weight/2.205)/height
+       
+    return bodymassindex
 
